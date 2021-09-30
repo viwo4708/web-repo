@@ -1,8 +1,12 @@
-<!DOCTYPE html>
 <html lang="en">
 
   <head>
-    <title> "Hello Me project" </title>
+    <meta charset="utf-8"/>
+    <title> "About Me" </title>
+    <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+
     <style>
 
       #topbanner {
@@ -10,69 +14,118 @@
       }
 
       #aboutme {
-        background-color: #FFEDD5;
+        background-color: #E8F2F6;
         margin-left: 30px;
         margin-right: 30px;
         margin-top: 30px;
-        margin-bottom: 30px;
+        margin-bottom: 30px
+      }
+
+      #aboutmetext {
+        padding-bottom: 30px;
+      }
+
+      hr {
+        border: none;
+        height: 4px;
+        /* Set the hr color */
+        color: #3A3989; /* old IE */
+        background-color: #3A3989; /* Modern Browsers */
       }
 
       h1 {
-        font-family: "Georgia", serif;
-        font-size: 55px;
+        font-family: "Merriweather";
+        font-size: 80px;
+        font-weight: 900;
+        letter-spacing: 3px;
+        line-height: 0px;
         text-align: center;
-        color: #F48800;
+        font-stretch: expanded;
+        color: #3A3989;
       }
 
       h2 {
-        font-family: "Georgia", serif;
-        font-style: italic;
-        font-size: 30px;
+        font-family: "Merriweather";
+        font-weight: 500;
+        font-size: 40px;
         text-align: center;
-        color: #F48800;
+        color: #3A3989;
       }
 
       h3 {
-        font-family: "Georgia", serif;
-        font-size: 25px;
+        font-family: "Merriweather";
+        font-size: 35px;
+        font-weight: 200;
         text-align: left;
-        color: #F48800;
+        color: #3A3989;
         margin: 25px 50px;
       }
 
-      p, ul, ol {
-        font-family: "Helvetica", sans-serif;
-        font-size: 16px;
-        color: #5F3802;
+      h4 {
+        font-family: "Titillium Web";
+        font-size: 30px;
+        text-align: left;
+        color: #405FB0;
         margin: 25px 50px;
+        font-style: italic;
+      }
+
+      p, ul, ol {
+        font-family: "Dosis";
+        font-size: 16px;
+        color: #000000;
+        margin: 25px 50px;
+      }
+
+      a:link {
+        color: #7ECBD6;
+      }
+
+      /* visited link */
+      a:visited {
+        color: #9694DD;
+      }
+
+      /* mouse over link */
+      a:hover {
+        color: #ACCAD0;
+      }
+
+      /* selected link */
+      a:active {
+        color: #ACCAD0;
       }
 
       img {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 30px;
+        padding-top: 30px;
         width: 50%;
       }
 
     </style>
-  </head>
 
+  </head>
 
   <body>
       <section id = "topbanner">
         <h1> Hi! I'm Vikki Wong </h1>
-        <h2> My preferred pronouns are she/her/hers. They/them works too. </h2>
+        <h2> This is the start of my website for ATLS 2200. </h2>
       </section>
+
+      <hr>
+
       <section id = "aboutme">
-        <img src="https://raw.githubusercontent.com/viwo4708/web-repo/main/picofme.jpg" alt="black and white picture of me">
-        <h3> Goals: </h3>
+      <img src="https://raw.githubusercontent.com/viwo4708/web-repo/main/picofme.jpg" alt="moody black and white photo of me">
+        <h4> Goals: </h4>
+        <div id = "aboutmetext">
         <p> My goal in this class is to learn more web designing "from scratch".
           I've only ever used services like Wix/Squarespace to create websites,
           and I want to learn more about how these services work, and also
           the advantages of coding a website yourself. I also want to improve my
           eye for digital design, and create some really good looking things.</p>
-        <h3> About Me: </h3>
+        <h4> About Me: </h4>
         <p> I adore photography, and I've spend the last two years
           shooting in and around Denver with a variety of models and small businesses.
           I ended up interning at 303 Magazine this summer, and I got to shoot
@@ -80,10 +133,12 @@
           <a href="https://vikkiwongphotography.wixsite.com/mysite" target="_blank">here.</a>
           (you should click the link even if you just look at the page for a second...I'm really
           proud of my work &#128517;) There are so many beautiful people out there who
-          can create such beautiful images, and I know I'll never be able to meet and work
-          with them all. I aspire to one day shoot for a magazine like Wonderland, or Boys
+          can create such beautiful images. I aspire to one day shoot for a magazine like Wonderland, or Boys
           By Girls. My next big upcoming shoot is a project for Apocalypse on Pearl Street so...
           stay tuned! </p>
+          <p> Wanna know more about my
+            <a href="https://viwo4708.github.io/web-repo/week2/" target="_self">thoughts on Pete Davidson?</a>
+          </p>
 
         <p> Some of my favorite musical artists are:</p>
           <ul>
@@ -102,9 +157,7 @@
             <li> Jean Shorts </li>
             <li> and Skinny Jeans </li>
           </ol>
-        <p> Wanna know more about my
-          <a href="https://viwo4708.github.io/web-repo/week2/" target="_self">thoughts on Pete Davidson?</a>
-        </p>
+      </div>
       </section>
   </body>
 
