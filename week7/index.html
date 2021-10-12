@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title> Quote Machine </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <section>
+      <h1> BEYONCÉ: THE ALBUM </h1>
+      <p id=lyricstxt>DECEMBER 13TH, 2013</p>
+    </section>
+    <section>
+      <h2 id=songtitletxt> TRACKLIST: </h1>
+      <div class="center">
+        <button id="btn"> NEXT SONG </button>
+      </div>
+    </section>
+
+    <script>
+
+      const songtitles = ["PRETTY HURTS", "HAUNTED/GHOST", "DRUNK IN LOVE",
+                     "BLOW", "NO ANGEL", "YONCÉ/PARTITION",
+                     "JEALOUS", "ROCKET", "MINE FT. DRAKE",
+                     "XO", "FLAWLESS FT. CHIMAMANDA NGOZI ADICHIE",
+                     "SUPERPOWER FT. FRANK OCEAN", "HEAVEN", "BLUE FT BLUE IVY"];
+      const lyrics = ["PERFECTION IS A DISEASE OF A NATION", "I KNOW IF I'M HAUNTING YOU YOU MUST BE HAUNTING ME",
+                     "WE BE ALL NIGHT", "YOU LIKE IT WET AND SO DO I",
+                     "I COME WITH A SIDE OF TROUBLE", "MASCARA RUNNIN' RED LIPSTICK SMUDGED",
+                     "I NEVER BROKE ONE PROMISE", "YOUR LOVE FEELS LIKE ALL FOUR SEASONS",
+                     "UP PAST MY BEDTIME, NO REST IN THE KINGDOM", "THEY'RE JUST HOPELESSLY GAZING",
+                     "BOW DOWN B*TCHES", "NOTHING I KNOW COULD SLOW US DOWN", "I FOUGHT FOR YOU THE HARDEST",
+                     "BABY, WON'T YOU HOLD ON TO ME"]
+      var index = 0;
+
+      document.getElementById("btn").addEventListener("click", buttonClicked);
+
+      function buttonClicked() {
+        console.log(songtitles[index]);
+        document.getElementById("songtitletxt").innerHTML = songtitles[index];
+        document.getElementById("lyricstxt").innerHTML = lyrics[index];
+        index ++;
+        if (index == songtitles.length) {
+          index = 0;
+        }
+      }
+
+    </script>
+  </body>
+
+</html>
