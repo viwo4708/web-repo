@@ -49,7 +49,7 @@ function normalmode() {
 
   document.getElementById("normbutton").classList = "shownbutton";
   document.getElementById("weirdbutton").classList = "hiddenbutton";
-  document.getElementById("blackorly").src = "image2.jpg";
+  document.getElementById("blackorly").src = "https://raw.githubusercontent.com/viwo4708/web-repo/main/midterm/image2.jpgg";
 }
 
 function weirdmode() {
@@ -65,7 +65,7 @@ function weirdmode() {
 
   document.getElementById("weirdbutton").classList = "shownbutton";
   document.getElementById("normbutton").classList = "hiddenbutton";
-  document.getElementById("blackorly").src = "image.jpg";
+  document.getElementById("blackorly").src = "https://raw.githubusercontent.com/viwo4708/web-repo/main/midterm/image.jpg";
 }
 
 function randInt(min, max) { //note: max excluded for use with arrays
