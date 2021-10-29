@@ -49,7 +49,7 @@ function normalmode() {
 
   document.getElementById("normbutton").classList = "shownbutton";
   document.getElementById("weirdbutton").classList = "hiddenbutton";
-  document.getElementById("blackorly").src = "https://raw.githubusercontent.com/viwo4708/web-repo/main/midterm/image2.jpgg";
+  document.getElementById("blackorly").src = "https://raw.githubusercontent.com/viwo4708/web-repo/main/midterm/image2.jpg";
 }
 
 function weirdmode() {
