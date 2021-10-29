@@ -1,3 +1,6 @@
+/*arrays of adjectives and nouns found at 
+https://gist.github.com/ijmacdowell/8325491*/
+
 const colors = ["pink", "yellow", "teal", "beige", "black", "blue", "grey",
               "green", "red", "white", "violet", "bronze", "gold", "silver",
               "azure", "auburn", "emerald", "cyan", "cerulean", "magenta", "fuschia",
