@@ -1,3 +1,5 @@
+/*random number function found here:
+https://www.w3schools.com/js/js_random.asp*/
 
 document.getElementById("normmode").addEventListener("click", normalmode, false);
 document.getElementById("normmode").addEventListener("click", changetabnorm, false);
