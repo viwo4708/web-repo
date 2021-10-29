@@ -4,25 +4,23 @@
 
 #topbanner {
   display: flex;
-  height: 153px;
+  height: 21vh;
   background-color: black;
 }
 
 #blackorly {
-  width: 410px;
+  width: 29vw;
   height: auto;
-  margin-left: 157px;
-  margin-top: 33px;
+  margin-left: 10vw;
+  margin-top: 4vh;
 }
 
 #display {
   display: flex;
-  margin: 0vh 0vw 0 0vw;
   height: 500px;
 }
 
 #image, #rightside {
-    flex-grow: 1;
     width: auto;
     background-color: white;
 }
@@ -41,13 +39,15 @@
 }
 
 #colortext {
-  margin-left: 185px;
-  margin-bottom: 35px;
-  margin-top: 20px;
+  width: 40vw;
+  height: 22vh;
+  margin-left: 15vw;
+  margin-bottom: 4vh;
+  margin-top: 6vh;
 }
 
 button {
-  margin-left: 48%;
+  margin-left: 27vw;
   background-color: white;
   border: 3px solid black;
   color: black;
