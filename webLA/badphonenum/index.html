@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>spelling</title>
+</head>
+<body>
+    <h1>gimme your phone number</h1>
+
+    <div>
+        <p>Enter your phone number below (10 digits, no hyphens, no spaces)</p>
+        <input id="numInput" type="text">
+        <button onclick="firstsubmit()">Submit</button>
+    </div>
+
+    <div id="spellInput" style= "display: none;">
+        <p>Now spell it out:</p>
+        <p>ie 1111111111 is one billion, one hundred eleven million, one hundred eleven thousand, one hundred eleven</p>
+        <input id="spellInputtext" style="width: 40%;" type="text">
+        <button onclick="secondsubmit()">Submit</button>
+    </div>
+
+    <h2 id="congratsmessage" style="display: none;">phone number successfully submitted. don't you have anything better to do?</h2>
+    <h2 id="failmessage" style="display: none;">try again sweaty</h2>
+<script type="text/javascript" src="numberToWords.min.js"></script>
+  <script src="phonenum.js"></script>
+</body>
+</html>
