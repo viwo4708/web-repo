@@ -12,18 +12,19 @@
     <div>
         <p>Enter your phone number below (10 digits, no hyphens, no spaces)</p>
         <input id="numInput" type="text">
-        <button onclick="firstsubmit()">Submit</button>
+        <button id="firstSubmit" onclick="firstsubmit()">Submit</button>
     </div>
 
     <div id="spellInput" style= "display: none;">
         <p>Now spell it out:</p>
-        <p>ie 1111111111 is one billion, one hundred eleven million, one hundred eleven thousand, one hundred eleven</p>
         <input id="spellInputtext" style="width: 40%;" type="text">
-        <button onclick="secondsubmit()">Submit</button>
+        <button id="secondSubmit" onclick="secondsubmit()">Submit</button>
     </div>
 
-    <h2 id="congratsmessage" style="display: none;">phone number successfully submitted. don't you have anything better to do?</h2>
-    <h2 id="failmessage" style="display: none;">try again sweaty</h2>
+    <h2 id="congratsmessage" style="display: none;">phone number successfully submitted. ur so good at copy pasting!</h2>
+    <h2 id="failmessage" style="display: none;">try again sweaty. you spelled</h2>
+    <h2 id="correctanswer" style="display: none;"></h2>
+    <h2 id="failmessagept2" style="display: none;">wrong.</h2>
 <script type="text/javascript" src="numberToWords.min.js"></script>
   <script src="phonenum.js"></script>
 </body>
