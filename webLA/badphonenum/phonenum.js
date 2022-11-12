@@ -1,6 +1,18 @@
-console.log(numberToWords.toWords(13)); // => “thirteen”
-
 let numinput = "";
+
+document.getElementById("numInput").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("firstSubmit").click();
+    }
+  });
+
+  document.getElementById("spellInput").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("secondSubmit").click();
+    }
+  });
 
 function firstsubmit(){
     numinput = document.getElementById("numInput").value;
@@ -18,42 +30,28 @@ function firstsubmit(){
     }
 
     document.getElementById("spellInput").style.display = "block";
-
-    console.log(numinput);
 }
+
+let correctAnswer = "";
 
 function secondsubmit(){
 
     let spellinput = document.getElementById("spellInputtext").value.toLowerCase();
-    console.log(numberToWords.toWords(parseInt(document.getElementById("numInput").value)));
+    correctAnswer = numberToWords.toWords(parseInt(document.getElementById("numInput").value));
 
-    if (numberToWords.toWords(parseInt(document.getElementById("numInput").value)) != spellinput) {
+    if (correctAnswer != spellinput) {
         document.getElementById("failmessage").style.display = "block";
+        document.getElementById("failmessagept2").style.display = "block";
+        document.getElementById("correctanswer").innerHTML = correctAnswer;
+        document.getElementById("correctanswer").style.display = "block";
         document.getElementById("congratsmessage").style.display = "none";
     }
     else {
         document.getElementById("congratsmessage").style.display = "block";
+        document.getElementById("failmessagept2").style.display = "none";
         document.getElementById("failmessage").style.display = "none";
+        document.getElementById("correctanswer").style.display = "none";
     }
 
-    
-    // console.log(spellinput);
-
-    // let fetchurl = "https://api.funtranslations.com/translate/numbers.json?text=" + document.getElementById("numInput").value;
-    
-    // console.log(fetchurl);
-
-    // fetch(fetchurl)
-    // .then((response) => response.json())
-    // .then((data) => {
-    //     console.log(data.contents.translated);
-    //     console.log(spellinput);
-    //     if (data.contents.translated.toLowerCase() != spellinput) {
-    //         alert("try again sweaty");
-    //     }     
-    //     else {
-    //         document.getElementById("congratsmessage").style.display = "block";
-    //     }
-    //   })
 }
 
