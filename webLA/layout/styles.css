@@ -32,17 +32,13 @@ body {
     padding: 0 20px;
     max-width: 980px;
   }
-
-  /* Sticky Class Designed to provide Sticky Property to the Navbar using JavaScript */
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
   
   nav {
     background-color: #000;
     padding: .5em;
+    position: sticky;
+    top: 0px;
+    left: 0px;
   }
   
   nav ul {
