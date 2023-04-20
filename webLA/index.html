@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <style>
+
+        p {
+        line-height: normal;
+        display: inline-block;
+        vertical-align: middle;
+        }
+        
+        #container {
+            display: flex;
+            gap: 1px;
+            width: 500%;
+
+        }
+
+        #container2 {
+            display: flex;
+            gap: 1px;
+            width: 500%;
+        }
+
+        .box {
+            width: 80px;
+            height: 80px;
+            border:1px solid black;
+            border-radius: 2px;
+            font-size: 45px;
+            text-align: center;
+            line-height: 80px;
+        }
+
+        .box2 {
+            width: 80px;
+            height: 80px;
+            border:1px solid black;
+            border-radius: 2px;
+            content-visibility: hidden;
+        }
+    
+
+
+        
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="./kisspng-computer-icons-sound-icon-volume-5ae14de3712944.2189859615247149794635.png" alt="volume icon" style="width: 70px; height: 70px; margin-right: 10px;">
+    </div>
+    <br>
+    <br>
+    <Br>
+    <div id="container2">
+        <img src="./kisspng-computer-icons-sound-icon-volume-5ae14de3712944.2189859615247149794635.png" alt="volume icon" style="width: 70px; height: 70px; margin-right: 10px;">
+    </div>
+    <script>
+
+        let divarray = new Array(100);
+        let divarray2 = new Array(100);
+        let numarray = new Array(100);
+        let orderedarray = new Array(100);
+
+        for (let i = 0; i < 100; i++) {
+            numarray[i] = i+1;
+        }
+
+        shuffle(numarray);
+
+        for (let i = 0; i < 100; i++) {
+            const newDiv = document.createElement("div");
+
+            newDiv.className = "box";
+            newDiv.addEventListener("click", colorChange, false);
+
+            // and give it some content
+            const newContent = document.createTextNode(numarray[i]);
+
+            divarray[i] = newDiv;
+
+            // add the text node to the newly created div
+            newDiv.appendChild(newContent);
+
+            // add the newly created element and its content into the DOM
+            document.getElementById("container").appendChild(newDiv);
+        }
+
+        for (let i = 0; i < 100; i++) {
+
+            orderedarray[Number(divarray[i].textContent)] = divarray[i];
+        }
+
+
+        for (let i = 0; i < 100; i++) {
+            const newDiv = document.createElement("div");
+
+            newDiv.className = "box2";
+            newDiv.addEventListener("click", colorChange2, false);
+
+            // and give it some content
+            const newContent = document.createTextNode(i);
+
+            divarray2[i] = newDiv;
+
+            // add the text node to the newly created div
+            newDiv.appendChild(newContent);
+
+            // add the newly created element and its content into the DOM
+            document.getElementById("container2").appendChild(newDiv);
+        }
+
+
+        function shuffle(array) {
+            let currentIndex = array.length,  randomIndex;
+
+            // While there remain elements to shuffle.
+            while (currentIndex != 0) {
+
+                // Pick a remaining element.
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex--;
+
+                // And swap it with the current element.
+                [array[currentIndex], array[randomIndex]] = [
+                array[randomIndex], array[currentIndex]];
+            }
+
+            return array;
+        }
+
+        function colorChange(e) {
+            // console.log(Number(e.target.textContent));
+            if (Number(e.target.textContent) == 1) {
+                e.target.style.backgroundColor = "magenta";
+            }
+            else if (orderedarray[Number(e.target.textContent)-1].style.backgroundColor != "magenta") {
+                for (let i = 0; i < divarray.length; i++) {
+                    divarray[i].style.backgroundColor = "white";
+                }
+            }
+            else {
+                e.target.style.backgroundColor = "magenta";
+            }
+        }
+
+        function colorChange2(e) {
+            // console.log(Number(e.target.textContent));
+            if (Number(e.target.textContent) == 0) {
+                e.target.style.backgroundColor = "magenta";
+            }
+            else if (divarray2[Number(e.target.textContent)-1].style.backgroundColor != "magenta") {
+                for (let i = 0; i < divarray.length; i++) {
+                    divarray2[i].style.backgroundColor = "white";
+                }
+            }
+            else {
+                e.target.style.backgroundColor = "magenta";
+            }
+        }
+
+
+    </script>
+</body>
+</html>
